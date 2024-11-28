@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Análise de Gastos">
+    <meta name="keywords" content="compras, gastos, controle, renda"> 
+
+    <link rel="stylesheet" href="styles.css">    
+    
+    <title>Análitico</title>
+
+</head>
+<body>
+
+    <address class="banner">       
+        <TR > 
+        <DIV class="cabecalho">
+            <Td><a href="quem_somos.html"><b>Quem Somos</b></a><td> | </td></Td>
+            <Td><b><i>Contato Administrador: <a align="right" href="https://wa.me/5521993459333/?text=Gostaria de falar sobre sua pagina na internet">
+                21-99999-9999</a><img src="img/zap.jpg" alt="imagem" height="1%" width="1%"></img></i></b></Td><td> |</td>
+        </DIV>
+        </TR>
+    </address>
+
+    <a href="Dicas.html"><h1 class="titulo">Análise de Gastos</h1></a>
+    <H5 class="titulo"><i>Analise seus gastos mensais e tenha controle das suas finanças</i></H5>
+    
+    <button type="button" onclick="relatorio()">Gerar Relatório</button>
+
+    <h2><b>Inclusão dos gastos do mês:</b></h2>
+    
+    <!-- Opções para adicionar um novo item -->
+     <section class="Novo_Item">
+        <input type="text" id="descricao" placeholder="Descrição:">
+        <input type="date" id="data" placeholder="Data de Pagamento:">
+        <input type="text" id="classificacao" name="novo_tipo" list="tipos" placeholder="Classificação:">
+        <datalist id="tipos"> 
+            <option value="Recorrente">
+            <option value="Alimentacao"> 
+            <option value="Transporte"> 
+            <option value="Entretenimento">
+            <option value="Saude"> 
+            <option value="Educacao">
+            <option value="Vestuario">
+            <option value="Outros">        
+        </datalist>
+        <input type="text" id="valor" placeholder="Valor gasto:">
+        <button onclick="newItem()" class="addBtn">Adicionar</button>
+    </section>
+    <br>
+
+    <!-- Tabela com items existentes -->
+    <section class="items">
+        <table id="tabela_itens">
+            <tr>
+                <th>Descrição</th>
+                <th>Dt de pagto</th>
+                <th>Classificação</th>
+                <th>Valor</th>
+                <th><img src="img/lixeira.png" width="15px" height="15px"></th>
+            </tr>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer class="rodape">
+        <i><b><p>&copy; 2024 Análise de Gastos</p></b></i>
+    </footer>
+</body>
+</html>
